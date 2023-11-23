@@ -45,6 +45,16 @@ dependencies {
     testImplementation("com.ninja-squad:springmockk:4.0.0")
 }
 
+allOpen {
+    annotation("javax.persistence.Entity")
+}
+
+noArg {
+    annotation("javax.persistence.Entity")
+}
+
+
+
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs += "-Xjsr305=strict"
